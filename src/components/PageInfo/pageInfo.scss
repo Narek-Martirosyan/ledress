@@ -1,0 +1,23 @@
+.page-top-info {
+    background: #f8f7f7;
+    padding: 60px 0 70px;
+
+    h4 {
+        color: #414141;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .site-pagination {
+        font-size: 14px;
+        font-weight: 600;
+        color: #414141;
+
+        a {
+            display: inline-block;
+            font-size: 14px;
+            color: #414141;
+            text-decoration: none;
+        }
+    }
+}

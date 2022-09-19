@@ -1,0 +1,47 @@
+.filter-widget {
+    margin-bottom: 100px;
+
+    .fw-title {
+        font-size: 18px;
+        font-weight: 700;
+        color: #414141;
+        text-transform: uppercase;
+        margin-bottom: 45px;
+    }
+
+    .fw-size-choose {
+        border-bottom: 2px solid #ebebeb;
+        padding-bottom: 40px;
+        margin-bottom: 50px;
+
+        .sc-item {
+            display: inline-block;
+            position: relative;
+            margin-right: 5px;
+        }
+
+        label {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 30px;
+            min-width: 30px;
+            font-size: 14px;
+            color: #414141;
+            font-weight: 500;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        input[type=radio] {
+            visibility: hidden;
+            position: absolute;
+
+            &:checked+label {
+                background: #f51167;
+                color: #fff;
+            }
+        }
+    }
+
+}

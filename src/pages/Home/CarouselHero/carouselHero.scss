@@ -1,0 +1,335 @@
+.carousel-slider {
+    .hs-item {
+        height: 720px;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+
+        span {
+            font-size: 18px;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 3px;
+            margin-bottom: 5px;
+            display: block;
+            position: relative;
+            top: 30px;
+
+            @media screen and (max-width: 768px) {
+                top: -130px;
+            }
+        }
+
+        h2 {
+            font-size: 60px;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 10px;
+            position: relative;
+            top: 20px;
+
+            @media screen and (max-width: 768px) {
+                top: -130px;
+                font-size: 40px;
+            }
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 300;
+            margin-bottom: 35px;
+            position: relative;
+            top: 50px;
+
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
+        }
+
+        .shop-now {
+            font-size: 14px;
+            font-weight: 300;
+            margin-bottom: 35px;
+            position: relative;
+            top: 18px;
+        }
+
+        .site-btn {
+            position: relative;
+            top: 100px;
+
+            @media screen and (max-width: 768px) {
+                top: -130px;
+            }
+        }
+
+        .site-btn {
+            display: inline-block;
+            border: none;
+            font-size: 14px;
+            font-weight: 600;
+            min-width: 167px;
+            padding: 18px 47px 14px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            background: #f51167;
+            color: #fff;
+            line-height: normal;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+
+            @media screen and (max-width: 425px) {
+                display: none;
+            }
+        }
+
+        .site-btn:hover {
+            color: #fff;
+        }
+
+        .site-btn.sb-white {
+            background: #fff;
+            color: #111111;
+        }
+
+        .site-btn.sb-line {
+            background: transparent;
+            color: #fff;
+            -webkit-box-shadow: inset 0 0 0 1px #fff;
+            box-shadow: inset 0 0 0 1px #fff;
+        }
+
+        .sb-line {
+            margin-right: 5px;
+
+            @media only screen and (max-width: 479px) {
+                margin-bottom: 15px;
+            }
+        }
+
+        .container {
+            position: relative;
+            padding-top: 170px;
+        }
+
+        .offer-card {
+            position: absolute;
+            right: 0;
+            top: 226px;
+            width: 162px;
+            height: 162px;
+            border-radius: 50%;
+            background: #f51167;
+            text-align: center;
+            animation-name: rotateOval;
+            animation-duration: 1s;
+
+            @keyframes rotateOval {
+                from {
+                    transform: rotate(45deg);
+                }
+
+                to {
+                    transform: rotate(0deg);
+                }
+            }
+
+            @media screen and (max-width: 768px) {
+                width: 100px;
+                height: 100px;
+                top: 100px;
+            }
+
+            h2 {
+                @media screen and (max-width: 768px) {
+                    font-size: 20px;
+                    top: 20px;
+                }
+            }
+
+            span {
+                @media screen and (max-width: 768px) {
+                    top: 20px;
+                }
+            }
+        }
+
+        .offer-card:after {
+            position: absolute;
+            content: "";
+            width: calc(100% - 10px);
+            height: calc(100% - 10px);
+            border: 1px solid #f96790;
+            left: 5px;
+            top: 5px;
+            border-radius: 50%;
+
+            span {
+                font-size: 18px;
+                text-transform: lowercase;
+                position: relative;
+            }
+
+            h2 {
+                font-size: 72px;
+                font-weight: 400;
+                line-height: 2;
+            }
+
+            p {
+                text-transform: uppercase;
+                line-height: 1;
+                font-size: 14px;
+            }
+        }
+
+        // @media screen and (max-width: 768px) {
+        //     height: 50vh;
+        // }
+    }
+
+    .slider-nav-warp {
+        max-width: 1145px;
+        bottom: 0;
+        margin: -78px auto 0;
+
+        @media only screen and (min-width: 992px) and (max-width: 1199px) {
+            max-width: 930px;
+        }
+
+        @media only screen and (min-width: 768px) and (max-width: 991px) {
+            max-width: 690px;
+        }
+
+        @media only screen and (max-width: 767px) {
+            max-width: 510px;
+        }
+
+        @media only screen and (min-width: 576px) and (max-width: 766px) {
+            padding: 0 15px;
+        }
+
+        @media only screen and (max-width: 479px) {
+            max-width: 510px;
+            padding: 0 15px;
+        }
+    }
+
+    .slider-nav {
+        display: inline-block;
+        padding: 0 38px;
+        position: relative;
+    }
+
+    .owl-dots {
+        display: -ms-flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        padding-top: 9px;
+
+        .owl-dot {
+            width: 8px;
+            height: 8px;
+            background: #fff;
+            border-radius: 15px;
+            margin-right: 10px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        .owl-dot.active {
+            opacity: 1;
+        }
+    }
+
+    .owl-nav {
+
+        button.owl-next,
+        button.owl-prev {
+            font-size: 27px;
+            position: absolute;
+            color: #fff;
+            bottom: -20px;
+        }
+
+        button.owl-next {
+            right: 0;
+        }
+
+        button.owl-prev {
+            left: 0;
+        }
+    }
+
+    .owl-item.active {
+        .hs-item {
+
+            h2,
+            span,
+            p,
+            .site-btn {
+                top: 0;
+            }
+
+            span {
+                -webkit-transition: all 0.5s ease 0.2s;
+                -o-transition: all 0.5s ease 0.2s;
+                transition: all 0.5s ease 0.2s;
+            }
+
+            h2 {
+                -webkit-transition: all 0.5s ease 0.4s;
+                -o-transition: all 0.5s ease 0.4s;
+                transition: all 0.5s ease 0.4s;
+
+                @media only screen and (max-width: 767px) {
+                    font-size: 50px;
+                }
+
+                @media only screen and (max-width: 479px) {
+                    font-size: 35px;
+                }
+            }
+
+            p {
+                -webkit-transition: all 0.5s ease 0.6s;
+                -o-transition: all 0.5s ease 0.6s;
+                transition: all 0.5s ease 0.6s;
+            }
+
+            .site-btn {
+                -webkit-transition: all 0.5s ease 0.8s;
+                -webkit-transition: all 0.5s ease 0.8s;
+                -o-transition: all 0.5s ease 0.8s;
+                transition: all 0.5s ease 0.8s;
+            }
+
+            .offer-card {
+                opacity: 1;
+                -webkit-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg);
+                -webkit-transition: all 0.5s ease 1s;
+                -webkit-transition: all 0.5s ease 1s;
+                -o-transition: all 0.5s ease 1s;
+                transition: all 0.5s ease 1s;
+
+                @media only screen and (min-width: 768px) and (max-width: 991px) {
+                    top: 20px;
+                }
+
+                @media only screen and (max-width: 767px) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        height: 50vh !important;
+    }
+}

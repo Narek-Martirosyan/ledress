@@ -1,0 +1,19 @@
+.accordion-area {
+    margin-top: 50px;
+
+    .accordion-item {
+        border: none;
+
+        .accordion-header {
+            border-top: 2px solid grey;
+
+            .accordion-button {
+                outline: none !important;
+                box-shadow: none !important;
+                background-color: transparent;
+                color: black;
+                font-weight: 600;
+            }
+        }
+    }
+}

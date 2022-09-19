@@ -1,0 +1,44 @@
+.fw-size-choose {
+    border-bottom: none;
+    margin-bottom: 30px;
+    padding-bottom: 0;
+    user-select: none;
+
+    p {
+        float: left;
+        margin-right: 38px;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #414141;
+        padding-top: 10px;
+        margin-bottom: 0;
+    }
+
+    label {
+        width: 33px;
+        height: 33px;
+        font-size: 12px;
+        border: 2px solid #414141;
+        border-radius: 50%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    input[type=radio] {
+        visibility: hidden;
+        position: absolute;
+
+        &:checked+label {
+            background: #f51167;
+            color: #fff;
+        }
+    }
+
+    .sc-item {
+        display: inline-block;
+        position: relative;
+        margin-right: 5px;
+    }
+}

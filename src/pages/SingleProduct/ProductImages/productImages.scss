@@ -1,0 +1,69 @@
+.product-pic-zoom {
+    margin-bottom: 35px;
+}
+
+.product-thumbs {
+    overflow: hidden;
+    outline: none;
+    overflow-x: scroll;
+
+    
+
+    .product-thumbs-track {
+        width: 900px;
+
+        @media screen and (max-width: 750px) {
+            width: 600px;
+        }
+    }
+
+    .pt {
+        width: 116px;
+        height: 116px;
+        float: left;
+        margin-right: 31px;
+        overflow: hidden;
+        cursor: pointer;
+        position: relative;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .pt.active:after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        border: 2px solid #f51167;
+        z-index: 1;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+        margin-bottom: 50px;
+    }
+}
+
+.zoomed-image {
+    background-size: cover;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(155, 155, 155)
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
