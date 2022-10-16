@@ -6,17 +6,17 @@ import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { addCart, addFavourite, removeFavourite } from '../../../api/product_API';
 import { changeNumberData } from '../../../features/numberSlice';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { toast } from "react-toastify";
 
 export const LatestProducts = ({ products, title }) => {
-    const [screenWidth, setScreenWidth] = useState("");
     const [screenSize, setScreenSize] = useState(window.innerWidth);
     const navigate = useNavigate();
     const productId = useSelector(state => state.user.cartProductId);
     const favouriteId = useSelector(state => state.user.favouriteId);
     const dispatch = useDispatch();
     const token = useSelector(state => state.user.token);
+    let screenWidth = 4;
 
     const addCartHandler = async (e, id) => {
         e.stopPropagation();
@@ -57,20 +57,15 @@ export const LatestProducts = ({ products, title }) => {
 
     window.addEventListener("resize", function (e) {
         setScreenSize(this.window.innerWidth);
-
     });
 
-    useEffect(() => {
-        if (window.innerWidth <= 991 && window.innerWidth > 767) {
-            setScreenWidth(991);
-        } else if (window.innerWidth <= 767 && window.innerWidth > 450) {
-            setScreenWidth(767);
-        } else if (window.innerWidth <= 450) {
-            setScreenWidth(450);
-        } else {
-            setScreenWidth(1000);
-        }
-    }, [screenSize]);
+    if (screenSize <= 991 && screenSize > 767) {
+        screenWidth = 3;
+    } else if (screenSize <= 767 && screenSize > 450) {
+        screenWidth = 2;
+    } else if (screenSize <= 450) {
+        screenWidth = 1;
+    }
 
     return (
         <section className="top-letest-product-section" id='favourite'>
@@ -79,7 +74,7 @@ export const LatestProducts = ({ products, title }) => {
                     <h2>{title}</h2>
                 </div>
                 <Carousel
-                    slidesToShow={screenWidth === 991 ? 3 : screenWidth === 767 ? 2 : screenWidth === 450 ? 1 : 4}
+                    slidesToShow={screenWidth}
                     wrapAround={true}
                     autoplay={true}
                     dragThreshold={.2}

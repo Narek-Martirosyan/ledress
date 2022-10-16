@@ -23,12 +23,12 @@ export const MyAccount = () => {
     return (
         <div className="account-page">
             <div className="user-top-section">
-                <div><BsHandbag fontSize={200} color={"#F51167"} style={{ opacity: ".5" }} /></div>
+                <div><BsHandbag className="handbag"  /></div>
                 <div className="user-details">
                     <img src={user?.avatar?.[0]?.url} alt={`${user?.userName} ${user?.lastName}`} />
                     <h1>{`${user?.userName} ${user?.lastName}`}</h1>
                 </div>
-                <div><FaHandHoldingHeart fontSize={200} color={"#F51167"} style={{ opacity: ".5" }} /></div>
+                <div><FaHandHoldingHeart className="handholding" /></div>
             </div>
 
 
