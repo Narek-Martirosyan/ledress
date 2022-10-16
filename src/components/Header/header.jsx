@@ -21,7 +21,6 @@ export const Header = () => {
     const [showLogin, setShowLogin] = useState(false);
     const [currentUser, setCurrentUser] = useState([]);
     const [mobileMenu, setMobileMenu] = useState(false);
-    const userToken = localStorage.getItem("token");
     const token = useSelector(state => state.user.token); //global store
     const navigate = useNavigate();
     const number = useSelector(state => state.number.data);
@@ -157,35 +156,35 @@ export const Header = () => {
                     <ul className="main-menu">
                         <li><Link to="/ledress">Home</Link></li>
                         <li><Link to="/products">Products</Link></li>
-                        <li className='not-allowed'><Link to="/men" className='disable' >Men</Link></li>
+                        <li className='not-allowed'><span className='disable' >Men</span></li>
                         <li className='not-allowed'>
-                            <Link to="/jewelry" className='disable'>
+                            <span className='disable'>
                                 Jewelry
                                 <span className="new">New</span>
-                            </Link>
+                            </span>
                         </li>
-                        <li className='not-allowed'><Link to="/shoes" className='disable'>Shoes</Link>
+                        <li className='not-allowed'><span className='disable'>Shoes</span>
 
                             <ul className="sub-menu">
-                                <li className='not-allowed'><Link to="/sneakers" className='disable'>Sneakers</Link></li>
-                                <li className='not-allowed'><Link to="/sandals" className='disable'>Sandals</Link></li>
-                                <li className='not-allowed'><Link to="/formal-shoes" className='disable'>Formal Shoes</Link></li>
-                                <li className='not-allowed'><Link to="/boots" className='disable'>Boots</Link></li>
-                                <li className='not-allowed'><Link to="/flip-flops" className='disable'>Flip Flops</Link></li>
+                                <li className='not-allowed'><span className='disable'>Sneakers</span></li>
+                                <li className='not-allowed'><span className='disable'>Sandals</span></li>
+                                <li className='not-allowed'><span className='disable'>Formal Shoes</span></li>
+                                <li className='not-allowed'><span className='disable'>Boots</span></li>
+                                <li className='not-allowed'><span className='disable'>Flip Flops</span></li>
                             </ul>
                         </li>
 
-                        <li><Link to="/pages">Pages</Link>
+                        <li><span>Pages</span>
                             <ul className="sub-menu">
                                 {token ? <li><Link to={"/myaccount"}>My account</Link></li> : null}
                                 <li><Link to="/products">Products</Link></li>
                                 {token ? <li><Link to="/cart">Cart</Link></li> : null}
-                                <li className='not-allowed'><Link to="/checkout" className='disable'>Checkout</Link></li>
-                                <li className='not-allowed'><Link to="/contact" className='disable'>Contact</Link></li>
+                                <li className='not-allowed'><span className='disable'>Checkout</span></li>
+                                <li className='not-allowed'><span className='disable'>Contact</span></li>
                             </ul>
                         </li>
 
-                        <li className='not-allowed'><Link to="/blog" className='disable'>Blog</Link></li>
+                        <li className='not-allowed'><span className='disable'>Blog</span></li>
                     </ul>
                 </div>
             </nav>

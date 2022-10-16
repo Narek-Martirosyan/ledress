@@ -9,7 +9,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { changeNumberData } from '../../features/numberSlice';
 import Swal from 'sweetalert2';
 import { LatestProducts } from '../Home/LatestProducts/latestProducts';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { ProductImages } from '../SingleProduct/ProductImages';
 import { Checkout } from '../Checkout';
 import { toast } from "react-toastify";
@@ -27,7 +27,6 @@ export const CartPage = () => {
     const [spwidth1, setSpwidth1] = useState(435);
     const [spwidth2, setSpwidth2] = useState(425);
     const [showCheckout, setShowCheckout] = useState(false);
-    const token = useSelector(state => state.user.token);
 
     useEffect(() => {
         getUser().then(res => setCurrentUser(res.data.user));

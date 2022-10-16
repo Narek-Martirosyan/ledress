@@ -175,7 +175,7 @@
             position: relative;
             cursor: pointer;
 
-            a {
+            a, span {
                 display: inline-block;
                 font-size: 16px;
                 color: #ffffff;
@@ -201,9 +201,9 @@
                 }
             }
 
-            a.disable {
+            a.disable, span.disable {
                 pointer-events: none;
-                color: grey;
+                color: grey!important;
                 user-select: none;
             }
 
@@ -216,12 +216,16 @@
             &:hover>a {
                 color: #f51167;
             }
+            
+            &:hover>span {
+                color: #f51167;
+            }
         }
         li.not-allowed {
             color: grey;
             cursor: not-allowed;
 
-            &:hover>a {
+            &:hover>a, span {
                 color: grey;
             }
         }
@@ -247,7 +251,7 @@
             li {
                 display: block;
 
-                a {
+                a, span {
                     display: block;
                     color: #000;
                     margin-right: 0;

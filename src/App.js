@@ -23,7 +23,7 @@ function App() {
     if (!token && pathname === "/cart") {
       navigate("/ledress");
     }
-
+    // eslint-disable-next-line
   }, [pathname]);
 
   useEffect(() => {

@@ -2,13 +2,10 @@ import './checkout.scss';
 import { MdOutlineClose } from 'react-icons/md';
 import { GrMapLocation } from 'react-icons/gr';
 import { AiTwotonePhone } from 'react-icons/ai';
-import { useNavigate } from 'react-router-dom';
 import { removeCart } from '../../api/product_API';
 import Swal from 'sweetalert2';
 
 export const Checkout = ({ setShowCheckout, total, userCart }) => {
-    const navigate = useNavigate();
-
     const onSubmitHandler = (e) => {
         e.preventDefault();
 
