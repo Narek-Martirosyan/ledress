@@ -88,8 +88,9 @@ export const Header = () => {
                                 <li><Link to="/ledress">Home</Link></li>
                                 <li><Link to="/products">Products</Link></li>
                                 <li><Link to="/cart">Cart</Link></li>
-                                <li><Link to="/checkout">Checkout</Link></li>
-                                <li><Link to="/contact">Contact</Link></li>
+                                <li className='not-allowed'><span className='disable'>Checkout</span></li>
+                                <li className='not-allowed'><span className='disable'>Contact</span></li>
+                                <li><Link to="/myaccount">My account</Link></li>
                             </ul>
                         </div>
 

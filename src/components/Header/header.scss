@@ -29,7 +29,8 @@
             li {
                 overflow: hidden;
 
-                a {
+                a,
+                span {
                     text-decoration: none;
                     color: white;
                     display: inline-block;
@@ -47,10 +48,27 @@
                     }
                 }
             }
+
+            li.not-allowed {
+                color: grey;
+                cursor: not-allowed;
+
+                &:hover>a,
+                span {
+                    color: grey;
+                }
+
+                a.disable,
+                span.disable {
+                    pointer-events: none;
+                    color: grey !important;
+                    user-select: none;
+                }
+            }
         }
 
         .active-menu {
-            height: 300px;
+            height: 330px;
         }
 
         @media only screen and (max-width: 767px) {
@@ -175,7 +193,8 @@
             position: relative;
             cursor: pointer;
 
-            a, span {
+            a,
+            span {
                 display: inline-block;
                 font-size: 16px;
                 color: #ffffff;
@@ -201,9 +220,10 @@
                 }
             }
 
-            a.disable, span.disable {
+            a.disable,
+            span.disable {
                 pointer-events: none;
-                color: grey!important;
+                color: grey !important;
                 user-select: none;
             }
 
@@ -216,16 +236,18 @@
             &:hover>a {
                 color: #f51167;
             }
-            
+
             &:hover>span {
                 color: #f51167;
             }
         }
+
         li.not-allowed {
             color: grey;
             cursor: not-allowed;
 
-            &:hover>a, span {
+            &:hover>a,
+            span {
                 color: grey;
             }
         }
@@ -251,7 +273,8 @@
             li {
                 display: block;
 
-                a, span {
+                a,
+                span {
                     display: block;
                     color: #000;
                     margin-right: 0;
@@ -291,4 +314,3 @@
         display: none;
     }
 }
-
