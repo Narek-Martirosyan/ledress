@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/ledress/static/css/main.75c938e2.css",
-    "main.js": "/ledress/static/js/main.1ad2d236.js",
+    "main.css": "/ledress/static/css/main.29d06dfd.css",
+    "main.js": "/ledress/static/js/main.fa4cfdec.js",
     "static/media/bg-2.jpg": "/ledress/static/media/bg-2.0d28aed7890c83808531.jpg",
     "static/media/bg.jpg": "/ledress/static/media/bg.bf517e076f2e538d183a.jpg",
     "static/media/logo.png": "/ledress/static/media/logo.b294885d644d96af5bad.png",
     "static/media/banner-bg.jpg": "/ledress/static/media/banner-bg.f588b29145939c559001.jpg",
     "index.html": "/ledress/index.html",
-    "main.75c938e2.css.map": "/ledress/static/css/main.75c938e2.css.map",
-    "main.1ad2d236.js.map": "/ledress/static/js/main.1ad2d236.js.map"
+    "main.29d06dfd.css.map": "/ledress/static/css/main.29d06dfd.css.map",
+    "main.fa4cfdec.js.map": "/ledress/static/js/main.fa4cfdec.js.map"
   },
   "entrypoints": [
-    "static/css/main.75c938e2.css",
-    "static/js/main.1ad2d236.js"
+    "static/css/main.29d06dfd.css",
+    "static/js/main.fa4cfdec.js"
   ]
 }
