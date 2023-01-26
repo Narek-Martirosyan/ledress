@@ -38,7 +38,8 @@ export const Registration = ({ setShowRegister }) => {
         formData.append("file", user.avatar);
 
         const res = await registration(formData);
-        if (res.statusText === "OK") {
+        console.log(res);
+        if (res.status === 200) {
             setShowRegister(false);
             dispatch(changeUserData(res.data));
             window.location.href = "/ledress";

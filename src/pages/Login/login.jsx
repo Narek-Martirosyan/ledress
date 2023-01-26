@@ -22,13 +22,17 @@ export const Login = ({ setShowLogin }) => {
         e.preventDefault();
 
         const res = await login(user);
+        try {
+            if (res.status === 200) {
+                dispatch(changeUserData(res.data));
+                setShowLogin(false);
+                window.location.href = "/ledress";
+            }
+        } catch (err) {
+            console.log(err);
 
-        if (res.statusText === "OK") {
-            dispatch(changeUserData(res.data));
-            setShowLogin(false);
-            window.location.href = "/ledress";
+            throw err;
         }
-
     }
 
     return (
