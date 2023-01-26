@@ -13,6 +13,8 @@ export const Home = () => {
     useEffect(() => {
         getProducts().then(res => {
             setProducts(res.data.products);
+
+            console.log(Array.isArray(res.data.products), res);
         });
     }, []);
 

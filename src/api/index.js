@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-    baseURL: "https://nekoma-server.herokuapp.com/"
+    baseURL: "https://server-nekoma.onrender.com/"
 });
 
 
