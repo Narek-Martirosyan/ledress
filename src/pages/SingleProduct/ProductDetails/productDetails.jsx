@@ -21,7 +21,7 @@ export const ProductDetails = ({ singleProduct }) => {
         if (token) {
             if (!productId.includes(id)) {
                 const res = await addCart(id);
-                if (res.statusText === "OK") {
+                if (res.status === 200) {
                     navigate("/cart");
                     dispatch(changeNumberData(Math.random()));
                 }

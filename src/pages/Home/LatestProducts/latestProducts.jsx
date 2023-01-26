@@ -23,7 +23,7 @@ export const LatestProducts = ({ products, title }) => {
 
         if (token) {
             const res = await addCart(id);
-            if (res.statusText === "OK") {
+            if (res.status === 200) {
                 toast.success("Product has been added");
                 dispatch(changeNumberData(Math.random()));
             }
@@ -39,13 +39,13 @@ export const LatestProducts = ({ products, title }) => {
             if (favouriteId?.includes(id)) {
 
                 const res = await removeFavourite(id);
-                if (res.statusText === "OK") {
+                if (res.status === 200) {
                     toast.success("Product has been deleted");
                     dispatch(changeNumberData(Math.random()));
                 }
             } else {
                 const res = await addFavourite(id);
-                if (res.statusText === "OK") {
+                if (res.status === 200) {
                     toast.success("Product has been added");
                     dispatch(changeNumberData(Math.random()));
                 }

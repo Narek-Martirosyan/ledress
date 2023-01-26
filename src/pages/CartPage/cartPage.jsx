@@ -63,7 +63,7 @@ export const CartPage = () => {
         }).then((result) => {
             if (result.isConfirmed) {
                 removeCart(id).then(res => {
-                    if (res.statusText === "OK") {
+                    if (res.status === 200) {
                         dispatch(changeNumberData(Math.random()));
                         Swal.fire({
                             position: 'center',
@@ -82,7 +82,7 @@ export const CartPage = () => {
         e.stopPropagation();
 
         const res = await addCart(id);
-        if (res.statusText === "OK") {
+        if (res.status === 200) {
             toast.success("Product has been added");
             dispatch(changeNumberData(Math.random()));
         }
@@ -94,13 +94,13 @@ export const CartPage = () => {
         if (favouriteId?.includes(id)) {
 
             const res = await removeFavourite(id);
-            if (res.statusText === "OK") {
+            if (res.status === 200) {
                 toast.success("Product has been deleted");
                 dispatch(changeNumberData(Math.random()));
             }
         } else {
             const res = await addFavourite(id);
-            if (res.statusText === "OK") {
+            if (res.status === 200) {
                 toast.success("Product has been added");
                 dispatch(changeNumberData(Math.random()));
             }
